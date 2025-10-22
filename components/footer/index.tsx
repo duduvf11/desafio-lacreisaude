@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function Footer() {
     return (
-        <footer className="ml-24 mr-24 mt-30 border-t-1 border-emerald-20">
+        <footer className="ml-24 mr-24 mt-30 border-t border-emerald-20">
             <div className="flex flex-col flex-wrap w-full items-center justify-start p-8 gap-4">
                 <h2 className="text-headline-base font-bold text-emerald-60">Feito para o desafio do Lacrei Saúde.</h2>
                 <div className="flex flex-wrap gap-4">

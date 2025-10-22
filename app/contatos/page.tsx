@@ -1,31 +1,22 @@
-import Link from "next/link";
+import Image from 'next/image';
+import ContactForm from '@/components/contact/ContactForm';
 
 export default function ContatosPage() {
-    return (
-      <main className="bg-gray-10">
-      <h1>Contato</h1>
-      <p>Entre em contato com a Lacrei Saúde.</p>
+  return (
+    <main className="min-h-screen bg-gray-10 py-12">
+      <div className="container mx-auto px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <div>
+            <ContactForm />
+          </div>
 
-      <form>
-        <div>
-          <label htmlFor="nome">Nome:</label>
-          <input type="text" id="nome" name="nome" required />
+          <div className="w-full">
+            <div className="rounded-lg overflow-hidden shadow-lg">
+              <Image src="/bg-contatos.jpg" alt="Contato" width={900} height={900} className="w-full h-auto object-cover rounded-lg" />
+            </div>
+          </div>
         </div>
-
-        <div>
-          <label htmlFor="email">E-mail:</label>
-          <input type="email" id="email" name="email" required />
-        </div>
-
-        <div>
-          <label htmlFor="mensagem">Mensagem:</label>
-          <textarea id="mensagem" name="mensagem" required></textarea>
-        </div>
-
-        <button type="submit">Enviar</button>
-      </form>
-
-      <Link href="/">Voltar para a Home</Link>
-      </main>
-    );
-  }
+      </div>
+    </main>
+  );
+}

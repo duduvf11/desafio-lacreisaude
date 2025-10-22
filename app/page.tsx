@@ -1,7 +1,11 @@
 export default function HomePage() {
   return (
-    <main>
-      <h1 className="bg-emerald-10">Página Inicial</h1>
+    <main className="bg-gray-10 border-2">
+      <h1>Bem-vindo(a) à Lacrei Saúde</h1>
+      <p>
+        Conectamos pessoas da comunidade LGBTQIAPN+ a profissionais de saúde que
+        oferecem atendimento acolhedor e seguro.
+      </p>
     </main>
   );
 }

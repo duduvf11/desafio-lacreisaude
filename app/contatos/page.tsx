@@ -19,7 +19,7 @@ export default function ContatosPage() {
 
         <div>
           <label htmlFor="mensagem">Mensagem:</label>
-          <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+          <textarea id="mensagem" name="mensagem" required></textarea>
         </div>
 
         <button type="submit">Enviar</button>

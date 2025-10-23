@@ -1,36 +1,111 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Desafio Lacrei Saúde
 
-## Getting Started
+Aplicação Next.js (App Router) com Tailwind CSS e styled-components.
 
-First, run the development server:
+## Requisitos
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Node.js 18+ (recomendado 20 LTS)
+- npm 9+ (ou pnpm/yarn, se preferir)
+
+## Instalação (Windows PowerShell)
+
+```powershell
+# clonar o repositório
+git clone https://github.com/duduvf11/desafio-lacreisaude.git
+cd desafio-lacreisaude
+
+# instalar dependências
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Execução
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```powershell
+# ambiente de desenvolvimento (usa Webpack por padrão neste projeto)
+npm run dev
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# build de produção
+npm run build
 
-## Learn More
+# iniciar servidor de produção
+npm run start
+```
 
-To learn more about Next.js, take a look at the following resources:
+- App local: http://localhost:3000
+- Se a porta estiver ocupada, use outra: `npx next dev -p 3001`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Sobre Turbopack x Webpack
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+No Next.js 16, o Turbopack é o padrão, mas aqui os scripts forçam Webpack com `--webpack` para compatibilidade. Se quiser experimentar o Turbopack:
 
-## Deploy on Vercel
+```powershell
+# executar sem a flag --webpack
+npx next dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Estrutura principal
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+app/
+	page.tsx          # Home (Hero + Features)
+	contatos/page.tsx # Formulário com imagem lateral
+	sobre/page.tsx    # Seções com imagem e cards
+components/
+	contact/ContactForm.tsx
+	features/*, hero/*, header/*, footer/*
+public/
+	(adicione imagens usadas nas páginas)
+```
+
+### Alias de import
+
+Usamos `@/` mapeando para a raiz do projeto. Exemplo:
+
+```ts
+import ContactForm from '@/components/contact/ContactForm'
+```
+
+## Testes
+
+O projeto usa Jest + Testing Library com a configuração oficial do Next (`next/jest`).
+
+Comandos (PowerShell):
+
+```powershell
+# executar todos os testes
+npm test
+
+# assistir alterações
+npx jest --watch
+
+# relatório de cobertura
+npx jest --coverage
+```
+
+Notas:
+- Testes rodam em jsdom (navegador simulado).
+- `next/image` é mockado em `jest.setup.ts` para simplificar.
+- Não é necessário `ts-jest` — a configuração usa o SWC do Next.
+
+## Estilo e Acessibilidade
+
+- Tailwind CSS v4 e styled-components para estilos.
+- Formulários com labels associados (`htmlFor`/`id`) e validação nativa.
+- Texto alternativo em imagens (`alt`).
+
+## Imagens
+
+Coloque suas imagens em `public/`. Alguns arquivos referenciados nas páginas (troque pelos seus):
+
+- `/hero-image.jpg`
+- `/bg-contatos.jpg`
+- `/sobre-right-1.jpg`, `/sobre-right-2.jpg`, `/sobre-main.jpg`
+
+## Lint
+
+```powershell
+npm run lint
+```
+
+## Deploy
+

@@ -34,7 +34,7 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <button type="submit" aria-label="Enviar mensagem" className="bg-emerald-60 text-gray-10 px-6 py-2 rounded-md hover:bg-emerald-40">Enviar</button>
+          <button type="submit" className="bg-emerald-60 text-gray-10 px-6 py-2 rounded-md">Enviar</button>
       </div>
     </form>
   );

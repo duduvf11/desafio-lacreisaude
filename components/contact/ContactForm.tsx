@@ -17,24 +17,24 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 bg-gray-10 p-8 rounded-lg shadow-xl">
+    <form onSubmit={handleSubmit} className="space-y-4 bg-gray-10 p-8 rounded-lg shadow-xl" aria-label="Formulário de contato da Lacrei Saúde">
       <div>
         <label htmlFor="contact-nome" className="block text-sm font-medium text-gray-70">Nome</label>
-        <input id="contact-nome" value={nome} onChange={e => setNome(e.target.value)} className="mt-1 block w-full border rounded-md p-2" required />
+        <input id="contact-nome" aria-required="true" value={nome} onChange={e => setNome(e.target.value)} className="mt-1 block w-full border rounded-md p-2" required />
       </div>
 
       <div>
         <label htmlFor="contact-email" className="block text-sm font-medium text-gray-70">E-mail</label>
-        <input id="contact-email" type="email" value={email} onChange={e => setEmail(e.target.value)} className="mt-1 block w-full border rounded-md p-2" required />
+        <input id="contact-email" type="email" aria-required="true" value={email} onChange={e => setEmail(e.target.value)} className="mt-1 block w-full border rounded-md p-2" required />
       </div>
 
       <div>
         <label htmlFor="contact-mensagem" className="block text-sm font-medium text-gray-70">Mensagem</label>
-        <textarea id="contact-mensagem" value={mensagem} onChange={e => setMensagem(e.target.value)} className="mt-1 block w-full border rounded-md p-2 h-32" required />
+        <textarea id="contact-mensagem" aria-required="true" value={mensagem} onChange={e => setMensagem(e.target.value)} className="mt-1 block w-full border rounded-md p-2 h-32" required />
       </div>
 
       <div>
-        <button type="submit" className="bg-emerald-60 text-gray-10 px-6 py-2 rounded-md">Enviar</button>
+        <button type="submit" aria-label="Enviar mensagem" className="bg-emerald-60 text-gray-10 px-6 py-2 rounded-md hover:bg-emerald-40">Enviar</button>
       </div>
     </form>
   );

@@ -3,7 +3,8 @@ import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <section className="container mx-auto px-6 py-12">
+    <section className="container mx-auto px-6 py-12"
+  aria-label="Seção inicial com introdução da Lacrei Saúde">
       <div className="flex flex-col md:flex-row items-center gap-8">
         <div className="w-full md:w-1/2">
           <div className="rounded-lg overflow-hidden shadow-lg">

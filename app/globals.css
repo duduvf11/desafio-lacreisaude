@@ -1,26 +1,87 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+
+@theme {
+  --font-display: 'Nunito', sans-serif;
+  /* === FONTES === */
+  --text-headline-xl: 48px;
+  --text-headline-lg: 40px;
+  --text-headline-base: 32px;
+  --text-headline-sm: 24px;
+  --text-text-xl: 18px;
+  --text-text-base: 16px;
+  --text-text-sm: 14px;
+  --text-text-xs: 12px;
+
+   /* Emerald Colors */
+  --color-emerald-10: #dff2ed;
+  --color-emerald-20: #b2dfd0;
+  --color-emerald-30: #80cab1;
+  --color-emerald-40: #4fb494;
+  --color-emerald-50: #29a480;
+  --color-emerald-60: #018762;
+  --color-emerald-70: #007756;
+  --color-emerald-80: #014c37;
+
+  /* Green Colors */
+  --color-green-10: #ebf9f0;
+  --color-green-20: #c4eed1;
+  --color-green-30: #9ce2b2;
+  --color-green-40: #75d693;
+  --color-green-50: #4ecb74;
+  --color-green-60: #00b15c;
+  --color-green-70: #298a46;
+  --color-green-80: #113b1e;
+
+  /* Red Colors */
+  --color-red-10: #fbeeea;
+  --color-red-20: #fce9e9;
+  --color-red-30: #f5bcbc;
+  --color-red-40: #ee9090;
+  --color-red-50: #963d1d;
+  --color-red-60: #bc1c1c;
+  --color-red-70: #9b1717;
+  --color-red-80: #6f1111;
+
+  /* Gray Colors */
+  --color-gray-10: #ffffff;
+  --color-gray-20: #f0f0f0;
+  --color-gray-30: #cfcfcf;
+  --color-gray-40: #bfbfbf;
+  --color-gray-50: #737373;
+  --color-gray-60: #515151;
+  --color-gray-70: #2d2d2d;
+  --color-gray-80: #131313;
+
+  /* Blue Colors */
+  --color-blue-10: #ebf2f9;
+  --color-blue-20: #c4deee;
+  --color-blue-30: #9cbee2;
+  --color-blue-40: #75a4d7;
+  --color-blue-50: #4d8acb;
+  --color-blue-60: #285b8a;
+  --color-blue-70: #1d3f63;
+  --color-blue-80: #11263b;
+
+  /* Orange Colors */
+  --color-orange-10: #fdf4e6;
+  --color-orange-20: #f9e8cc;
+  --color-orange-30: #f7ddb3;
+  --color-orange-40: #f3d199;
+  --color-orange-50: #f1c580;
+  --color-orange-60: #eeb966;
+  --color-orange-70: #ebae4d;
+  --color-orange-80: #e8a233;
 }
+
+

@@ -50,7 +50,7 @@ export function Header() {
       <nav
         role="navigation"
         aria-label="Menu principal"
-        className="hidden md:flex items-center gap-2 pr-6 lg:pr-20"
+        className="hidden md:flex items-center gap-2 pr-6"
       >
         <Link
           href="/sobre"

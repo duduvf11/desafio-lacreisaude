@@ -1,3 +1,4 @@
+import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -14,7 +15,7 @@ export default function Hero() {
 
         <div className="w-full md:w-1/2">
           <div className="bg-gray-10 rounded-lg p-8 shadow-md border">
-            <h2 className="text-headline-lg font-bold mb-4">O que é a Lacrei Saúde?</h2>
+            <h2 className="text-headline-lg text-emerald-70 font-bold mb-4">O que é a Lacrei Saúde?</h2>
             <p className="text-text-base text-gray-700 mb-6">
               O nosso papel é construir a conexão entre as pessoas da comunidade LGBTQIAPN+ que precisam
               de atendimento clínico com profissionais da saúde. Tudo isso com segurança, inclusão e representatividade.

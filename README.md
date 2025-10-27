@@ -109,3 +109,57 @@ npm run lint
 
 ## Deploy
 https://desafio-lacreisaude.vercel.app/
+
+## Checklist do desafio
+
+- [x] Páginas implementadas: Home (Hero + Features), Contatos (formulário com imagem), Sobre (seções com cards)
+- [x] Interatividade real em múltiplos componentes
+	- Menu mobile no Header (toggle)
+	- Botões com estados de foco/hover/active e transições
+	- Formulário com feedback de envio (aria-live) e botão “Limpar”
+	- Dica expandível no campo de mensagem (mostrar/ocultar ajuda)
+- [x] Acessibilidade
+	- Link “Ir para o conteúdo” (skip link) no layout
+	- Landmarks e títulos: main com `role="main"` e `aria-labelledby`
+	- Labels associados (`htmlFor`/`id`) e `aria-required` quando apropriado
+	- `alt` adequado nas imagens e contraste revisado
+- [x] Testes unitários (Jest + Testing Library)
+	- Cobrem pelo menos 4 componentes: Header, Hero, ContactForm, Footer
+	- `next/image` mockado e ambiente `jsdom`
+- [x] Responsividade
+	- Layouts em grid/flex que se adaptam a breakpoints do Tailwind
+	- Imagens com `object-cover`/`fill` para evitar áreas em branco
+- [x] Documentação (este README) com instalação, scripts, testes e decisões
+
+## Decisões técnicas
+
+- Next.js 16 (App Router) e React 19
+- Webpack forçado nos scripts (`--webpack`) por compatibilidade e previsibilidade
+- Tailwind CSS v4 para utilitários + styled-components para componentes estilizados
+- Testes com `next/jest` (sem `ts-jest`), `jest-environment-jsdom` e Testing Library
+- Alias `@/` apontando para a raiz do projeto
+
+## Responsividade e imagens
+
+- Seções usam grid/flex responsivos com espaçamentos consistentes
+- Componentes de imagem usam `next/image` com `fill` + `object-cover` quando necessário
+- Cards se reorganizam em 1/2/3 colunas conforme largura da tela
+
+## Como fazer rollback
+
+Use Git para desfazer alterações com segurança:
+
+```powershell
+# ver histórico
+git log --oneline
+
+# voltar um commit (exemplo)
+git revert <sha>
+
+# ou resetar para um ponto anterior (atenção: destrutivo se --hard)
+git reset --hard <sha>
+```
+
+Sobre o empacotador:
+- Para voltar a usar Turbopack, remova `--webpack` dos scripts em `package.json` e rode `npx next dev`.
+- Para manter Webpack, preserve as flags como estão neste projeto.

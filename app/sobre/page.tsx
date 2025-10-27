@@ -3,8 +3,9 @@ import InfoCard from '@/components/info/InfoCard';
 
 export default function SobrePage() {
   return (
-    <main className="bg-gray-10">
+    <main id="conteudo" className="bg-gray-10" role="main" aria-labelledby="titulo-sobre">
       <div className="container mx-auto px-6 py-12">
+        <h1 id="titulo-sobre" className="sr-only">Sobre a Lacrei Saúde</h1>
         {/* Intro: texto à esquerda e imagem à direita */}
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-16">
           <div>
@@ -32,7 +33,7 @@ export default function SobrePage() {
         {/* Missão, visão e valores */}
         <section className="text-center mb-12 bg-[url('/sobre-right-2.jpg')] bg-cover bg-center py-20 rounded-xl shadow-md">
           <h2 className="text-headline-base font-bold">Missão, visão e valores da Lacrei Saúde</h2>
-          <p className="text-gray-60 text-text-xl mt-2 mb-8">O que nos motiva</p>
+          <p className="text-gray-80 text-text-xl mt-2 mb-8">O que nos motiva</p>
 
           <div className="flex justify-center min-h-40 items-start">
               <div className=" space-y-4">

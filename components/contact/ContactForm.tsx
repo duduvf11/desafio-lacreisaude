@@ -25,7 +25,7 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 bg-gray-10 p-8 rounded-lg shadow-xl" aria-label="Formulário de contato da Lacrei Saúde">
+    <form onSubmit={handleSubmit} className="space-y-4 bg-gray-10 p-10 rounded-lg shadow-xl" aria-label="Formulário de contato da Lacrei Saúde">
       <div>
         <label htmlFor="contact-nome" className="block text-sm font-medium text-gray-70">Nome</label>
         <input id="contact-nome" aria-required="true" autoComplete="name" value={nome} onChange={e => setNome(e.target.value)} className="mt-1 block w-full border rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-emerald-60 transition" required />

@@ -10,7 +10,7 @@ export default function Features() {
         <p className="text-gray-10 mt-2">Atendimento de qualidade e inclusivo</p>
       </div>
 
-      <div className="m-auto max-w-2/3 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="m-auto max-w-2/3 grid grid-cols-1 lg:grid-cols-3 gap-8">
         <FeatureCard
           title="Inclusão"
           description="Nossa plataforma digital é acessível e atendemos toda comunidade LGBTQIAPN+."

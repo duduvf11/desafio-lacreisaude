@@ -8,10 +8,10 @@ export const metadata = {
 export default function SobrePage() {
   return (
     <main id="conteudo" className="bg-gray-10" role="main" aria-labelledby="titulo-sobre">
-      <div className="container mx-auto px-6 md:px-10 lg:px-20 py-12">
+      <div className="container px-6 lg:mr-40 md:px-10 lg:px-20 py-12">
         <h1 id="titulo-sobre" className="sr-only">Sobre a Lacrei Saúde</h1>
         {/* Intro: texto à esquerda e imagem à direita */}
-  <section className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] items-center gap-8 lg:gap-12">
+      <section className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] items-center gap-8 lg:gap-12">
           <div>
             <h1 className="text-headline-lg font-bold mb-4">Atendimento qualificado, seguro e inclusivo</h1>
             <div className="w-24 h-1 bg-emerald-60 mb-6" />
@@ -58,7 +58,7 @@ export default function SobrePage() {
 
         {/* Nosso propósito */}
   <section className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] items-center gap-8 lg:gap-12 py-12">
-          <div className="flex">
+          <div className="flex justify-center">
             <div className="w-full max-w-xl rounded-md overflow-hidden shadow-md">
               <Image
                 src="/sobre-main.jpg"

@@ -8,7 +8,7 @@ export function Header() {
 
   return (
     <header
-      className="bg-gray-10"
+      className="bg-linear-to-b from-emerald-10 to-gray-10"
       role="banner"
       aria-label="Cabeçalho principal com logo e navegação"
     >
@@ -39,7 +39,7 @@ export function Header() {
             src="/Menu_icon.svg"
             width={24}
             height={24}
-            alt=""
+            alt="Botão de menu mobile"
             aria-hidden
             priority
           />
@@ -54,13 +54,13 @@ export function Header() {
       >
         <Link
           href="/sobre"
-          className="inline-flex items-center justify-center rounded-md px-4 py-3 min-h-6 text-emerald-70 hover:bg-emerald-20 focus:outline-none focus:ring-2 focus:ring-emerald-60"
+          className="inline-flex items-center justify-center rounded-md px-4 py-3 min-h-6 text-gray-80 hover:bg-emerald-10 focus:ring-2 focus:ring-emerald-60"
         >
-          Sobre
+          Quem somos
         </Link>
         <Link
           href="/contatos"
-          className="inline-flex items-center justify-center rounded-md px-4 py-3 min-h-6text-emerald-70 hover:bg-emerald-20 focus:outline-none focus:ring-2 focus:ring-emerald-60"
+          className="inline-flex items-center justify-center rounded-md px-4 py-3 min-h-6 text-gray-80 hover:bg-emerald-10 focus:outline-none focus:ring-2 focus:ring-emerald-60"
         >
           Contatos
         </Link>
@@ -72,17 +72,18 @@ export function Header() {
           id="menu-principal-mobile"
           role="navigation"
           aria-label="Menu principal"
-          className="flex md:hidden flex-col items-stretch gap-2 w-full bg-gray-10 px-6 md:px-10 py-4"
+          className="flex md:hidden flex-col items-stretch gap-2 w-full rounded-md m-2 bg-gray-10 px-6 md:px-10 py-4"
         >
           <Link
             href="/sobre"
-            className="inline-flex items-center justify-start rounded-md px-4 py-3 min-h-6 text-emerald-70 hover:bg-emerald-20 focus:outline-none focus:ring-2 focus:ring-emerald-60"
+            className="inline-flex items-center justify-start rounded-md px-4 py-3 min-h-6 font-bold text-gray-80 focus:outline-none focus:text-emerald-70 focus:bg-emerald-10 focus:border-l-4 focus:rounded-l-none"
           >
-            Sobre
+            Quem somos
           </Link>
+          <span className="block h-px bg-emerald-50" />
           <Link
             href="/contatos"
-            className="inline-flex items-center justify-start rounded-md px-4 py-3 min-h-6 text-emerald-70 hover:bg-emerald-20 focus:outline-none focus:ring-2 focus:ring-emerald-60"
+            className="inline-flex items-center justify-start rounded-md px-4 py-3 min-h-6 font-bold text-gray-80 focus:outline-none focus:text-emerald-70 focus:bg-emerald-10 focus:border-l-4 focus:rounded-l-none"
           >
             Contatos
           </Link>

@@ -108,6 +108,7 @@ npm run lint
 ```
 
 ## Deploy
+https://desafio-lacreisaude.vercel.app/
 
 ## Checklist do desafio
 
@@ -162,5 +163,3 @@ git reset --hard <sha>
 Sobre o empacotador:
 - Para voltar a usar Turbopack, remova `--webpack` dos scripts em `package.json` e rode `npx next dev`.
 - Para manter Webpack, preserve as flags como estão neste projeto.
-
-

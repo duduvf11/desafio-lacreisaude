@@ -92,6 +92,53 @@ Notas:
 - Tailwind CSS v4 e styled-components para estilos.
 - Formulários com labels associados (`htmlFor`/`id`) e validação nativa.
 - Texto alternativo em imagens (`alt`).
+
+### Tipografia baseadas no Marsha Design System
+
+- Fontes carregadas (Google Fonts): Inter e Nunito.
+- Fonte de destaque (display): `Nunito` (token `--font-display`).
+- Escala tipográfica definida via tokens no `@theme` (arquivo `app/globals.css`):
+	- `--text-headline-xl: 48px`
+	- `--text-headline-lg: 40px`
+	- `--text-headline-base: 32px`
+	- `--text-headline-sm: 24px`
+	- `--text-text-xl: 18px`
+	- `--text-text-base: 16px`
+	- `--text-text-sm: 14px`
+	- `--text-text-xs: 12px`
+
+Como usar com Tailwind v4 (tokens):
+
+- Títulos: `text-headline-lg`, `text-headline-base`, etc.
+- Corpo do texto: `text-text-base`, `text-text-sm`, `text-text-xl`.
+- Exemplos:
+	- `<h1 class="text-headline-lg font-bold">Título</h1>`
+	- `<p class="text-text-base">Parágrafo</p>`
+
+Para ajustar a família tipográfica global, edite `app/globals.css` (ex.: aplicar `font-family` no body) ou use classes utilitárias do Tailwind.
+
+### Cores baseadas no Marsha Design System
+
+A paleta está definida como tokens no `@theme` de `app/globals.css`, com tons de 10 a 80:
+
+- Emerald: `--color-emerald-10` ... `--color-emerald-80`
+- Green: `--color-green-10` ... `--color-green-80`
+- Red: `--color-red-10` ... `--color-red-80`
+- Gray: `--color-gray-10` ... `--color-gray-80`
+- Blue: `--color-blue-10` ... `--color-blue-80`
+- Orange: `--color-orange-10` ... `--color-orange-80`
+
+Uso com Tailwind (mapa automático de tokens):
+
+- Texto: `text-emerald-60`, `text-gray-70`, etc.
+- Fundo: `bg-emerald-20`, `bg-gray-10`, etc.
+- Borda: `border-emerald-20`, `border-gray-30`, etc.
+
+Boas práticas de contraste:
+
+- Prefira textos em `text-gray-80`/`text-emerald-70` sobre fundos claros (`bg-gray-10`/`bg-emerald-20`).
+- Para fundos escuros, use textos claros (`text-gray-10`).
+- Valide contraste com o Lighthouse/axe; ajuste um tom acima/abaixo quando necessário.
 - Relatório do Lighthouse de Acessibilidade:
   
   <img width="492" height="184" alt="Relatorio do Light House - Acessibilidade" src="https://github.com/user-attachments/assets/dbb7b3b4-ea15-43df-94fc-edb6cfa61129" />

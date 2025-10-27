@@ -92,7 +92,49 @@ Notas:
 - Tailwind CSS v4 e styled-components para estilos.
 - Formulários com labels associados (`htmlFor`/`id`) e validação nativa.
 - Texto alternativo em imagens (`alt`).
+- Relatório do Lighthouse de Acessibilidade:
+  
+  <img width="492" height="184" alt="Relatorio do Light House - Acessibilidade" src="https://github.com/user-attachments/assets/dbb7b3b4-ea15-43df-94fc-edb6cfa61129" />
 
+## Desempenho
+
+Este projeto segue práticas para boa performance em produção. Abaixo, como medir e o que já foi aplicado.
+
+### Como medir localmente
+
+1) Build e servidor de produção
+
+```powershell
+npm run build
+npm run start
+```
+
+2) Lighthouse (Chrome)
+- Abra http://localhost:3000 no Chrome.
+- DevTools > Lighthouse > Performance, Best Practices e SEO.
+- Emule dispositivo móvel e conexão lenta para avaliar a experiência real.
+
+3) Core Web Vitals (referências)
+- LCP < 2.5s
+- CLS < 0.1
+- INP/FID “Good” (interação rápida)
+
+### Otimizações já aplicadas
+
+- next/image com `sizes` e `loading="lazy"` nas páginas de Sobre e Contatos para baixar a resolução adequada por breakpoint e adiar imagens não críticas.
+- Containers com proporção estável (ex.: `aspect-square`) para evitar CLS.
+- Renderização condicional do menu mobile: quando fechado, os links não são renderizados (reduz foco/DOM desnecessário e evita elementos interativos invisíveis).
+- App Router (RSC) por padrão: componentes do servidor quando possível; apenas onde há estado/efeitos usamos `"use client"` (Header, ContactForm).
+- Code-splitting e minificação padrão do Next/Webpack em produção.
+- Relatório do Lighthouse de Desempenho do Estado Atual:
+
+  <img width="528" height="342" alt="Relatorio do Light House - Desempenho" src="https://github.com/user-attachments/assets/f9d37462-e882-4907-aa1a-bdf829d7c7a8" />
+
+
+### Dicas de deploy
+
+- Em plataformas como Vercel, assets estáticos recebem cache agressivo por padrão; rotas estáticas podem ser servidas via CDN.
+- Evite imagens gigantes em `public/`; priorize formatos modernos (WebP/AVIF) quando possível.
 ## Imagens
 
 Coloque suas imagens em `public/`. Alguns arquivos referenciados nas páginas (troque pelos seus):

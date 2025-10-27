@@ -1,6 +1,10 @@
 import Image from 'next/image';
 import InfoCard from '@/components/info/InfoCard';
 
+export const metadata = {
+  title: 'Sobre',
+};
+
 export default function SobrePage() {
   return (
     <main id="conteudo" className="bg-gray-10" role="main" aria-labelledby="titulo-sobre">

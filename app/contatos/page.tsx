@@ -1,6 +1,10 @@
 import Image from 'next/image';
 import ContactForm from '@/components/contact/ContactForm';
 
+export const metadata = {
+  title: 'Contatos',
+};
+
 export default function ContatosPage() {
   return (
     <main id="conteudo" className="min-h-screen bg-gray-10 py-12" role="main" aria-labelledby="titulo-contatos">
